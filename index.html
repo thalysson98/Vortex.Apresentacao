@@ -526,6 +526,7 @@ tr.grp-row td{background:#f7f7f9;font-weight:600;color:var(--text)}
   box-shadow:0 3px 12px rgba(38,36,57,.06);
   overflow:hidden;
   width:100%;
+  text-align:left;
 }
 .code-bar{
   height:28px;
@@ -537,6 +538,7 @@ tr.grp-row td{background:#f7f7f9;font-weight:600;color:var(--text)}
   padding:0 12px;
   overflow-x:auto;
   white-space:nowrap;
+  text-align:left;
 }
 .code-bar i{width:6px;height:6px;border-radius:50%;background:#dadde3;flex-shrink:0}
 .code-bar span{margin-left:8px;font:500 9.5px var(--font);color:var(--muted)}
@@ -551,6 +553,7 @@ tr.grp-row td{background:#f7f7f9;font-weight:600;color:var(--text)}
   tab-size:2;
   margin:0;
   display:block;
+  text-align:left;
 }
 .code .t{color:#2563eb}
 .code .a{color:#7c3aed}
@@ -707,11 +710,12 @@ footer .footer-main{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:40p
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;padding:18px 24px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 20px rgba(20,28,48,.06);font-size:14px}
   .nav-links.open{display:flex;flex-direction:column;gap:0}
   .nav-links a{padding:12px 0}
-  .kpis,.pain-grid{grid-template-columns:repeat(2,1fr)}
+  .kpis,.pain-grid,.pillars{grid-template-columns:repeat(2,1fr)}
   .cmp,.road,.sim,.faq-grid,.feature.erp-block{grid-template-columns:1fr}
   .flow{grid-template-columns:repeat(3,1fr);gap:16px}
   .flow-preview{height:175px;padding:14px}
-  .pillar-card{padding:22px}
+  .pillar-card,.pillar-card:nth-child(-n+2),.pillar-card:last-child{grid-column:auto;display:flex;align-items:flex-start;text-align:left;padding:22px}
+  .pillar-card:last-child .ico{margin-bottom:10px}
   .feature h3{font-size:26px}
 }
 @media(max-width:700px){
@@ -737,14 +741,16 @@ footer .footer-main{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:40p
   .feature .f-text{max-width:none}
   .feature h3{margin-left:auto;margin-right:auto}
   .feature .eyebrow{margin-left:auto;margin-right:auto}
-  .checks{text-align:left}
+  .checks,.cmp-card,.tables,.tbox,.tnote,.code-window,.code{text-align:left}
+  .code{font-size:8.5px;padding:12px 14px}
   .feature .glow{width:100%;padding:0}
   .glow::before{inset:-5px;filter:blur(18px)}
   .hero-shot .glow::before{inset:-6px}
   .block-head{padding:56px 0 10px}
   .block-head h2{font-size:28px}
   .kpis,.pillars,.pain-grid,.sim-out{grid-template-columns:1fr}
-  .pillar-card,.pillar-card:nth-child(-n+2),.pillar-card:last-child{grid-column:auto;display:flex}
+  .pillar-card,.pillar-card:nth-child(-n+2),.pillar-card:last-child{grid-column:auto;display:flex;align-items:flex-start;text-align:left}
+  .pillar-card:last-child .ico{margin-bottom:10px}
   .sim{padding:24px 18px;gap:28px}
   .sim-board{padding:22px 14px}
   .faq-grid{gap:24px}
